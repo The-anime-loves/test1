@@ -1,10 +1,15 @@
 <?php
-"HOST" => "localhost"
+//creating a class that is called connection
+class Connection{
+    public $dbc
 
-"USERNAME" => "root"
+    public function __construct() {
+        $conn = require 'database/database.php';
 
-"PASSWORD" => ""
+        $this->dbc = new PDO("mysql:host=" . $conn["HOST"] . ";dbname=".$conn["DB"],$conn["USERNAME"],$conn["PASSWORD"]);
 
-"DB" => "test"
-
+        $this->dbc->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+        $this->dbc->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    }
+}
 ?>
