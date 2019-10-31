@@ -1,10 +1,12 @@
 <?php
-"HOST" => "localhost"
+    return[
 
-"USERNAME" => "root"
+        "HOST" => "localhost",
 
-"PASSWORD" => ""
+        "USERNAME" => "root",
 
-"DB" => "test"
+        "PASSWORD" => "",
 
-?>
+        "DB" => "test",
+    ];
+    
