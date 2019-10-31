@@ -1,6 +1,6 @@
 <?php
  require "class/anime.php";
-    echo Anime::recommendAnime();
+ Anime::recommendAnime();
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,8 @@
     <head>
         <meta charset="UTF-8">
         <title>index</title>
-        <link rel="stylesheet" type="text/css" href="css\index.css">  
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/anime.css">
     </head>
     <body>
     <h1>hej med dig</h1>
