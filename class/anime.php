@@ -5,8 +5,9 @@ require 'css/anime.css';
     
         public static function recommendAnime(){
             $connection = new Connection();
+            $sql = "SELECT title,rating,resume FROM anime ORDER BY id DESC LIMIT 6";
             
-            $stmt = $connection->dbc->prepare("SELECT title,rating,resume FROM anime ORDER BY id DESC LIMIT 6");
+            $stmt = $connection->dbc->prepare($sql);
             while ($row = $stmt-fetch()){
                 $stmt->execute();
                 
