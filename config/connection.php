@@ -1,9 +1,10 @@
 <?php
 //creating a class that is called connection
 class Connection{
-    public $dbc
+    
+    public $dbc;
 
-    public function __construct() {
+    public function __construct(){
         $conn = require 'database/database.php';
 
         $this->dbc = new PDO("mysql:host=" . $conn["HOST"] . ";dbname=".$conn["DB"],$conn["USERNAME"],$conn["PASSWORD"]);
