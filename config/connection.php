@@ -4,7 +4,7 @@ class Connection{
     
     public $dbc;
 
-    public function __construct(){
+    public function connect(){
         $conn = require 'database/database.php';
 
         $this->dbc = new PDO("mysql:host=" . $conn["HOST"] . ";dbname=".$conn["DB"],$conn["USERNAME"],$conn["PASSWORD"]);
